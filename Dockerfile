@@ -26,9 +26,9 @@ ENV GNUPGHOME /pocketmine
 
 RUN gpg --keyserver pgp.mit.edu --recv-key 2280B75B
 
-ENV PHP_BINARY /pocketmine/PocketMine-MP/bin/php5/bin/php
+ENV PHP_BINARY /pocketmine/PocketMine-MP/bin/php7/bin/php
 
-RUN cd PocketMine-MP && wget -q -O - http://cdn.pocketmine.net/installer.sh | bash -s - -v beta
+RUN cd PocketMine-MP && wget -q -O - https://raw.githubusercontent.com/pmmp/php-build-scripts/master/installer.sh | bash
 
 EXPOSE 19132
 EXPOSE 19132/udp
